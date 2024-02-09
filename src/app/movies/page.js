@@ -1,8 +1,13 @@
-import React from 'react'
+import Link from 'next/link'
 
 const page = () => {
   return (
-    <div>Movies Page</div>
+    <>
+    <h2>Movies Page</h2>
+    <Link href={'/movies/asdasd'}>
+      go to
+    </Link>
+    </>
   )
 }
 
