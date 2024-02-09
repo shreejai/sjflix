@@ -11,20 +11,20 @@ const montserrat = Montserrat({
   display: 'swap',
 })
 
-const Herosection = () => {
+const Herosection = ({title, imageUrl}) => {
   return (
       <main className={heroStyles.main_section}>
         <div className={styles.container}>
           <div className={styles.grid_two_section}>
             <div className={heroStyles.hero_content}>
-              <h1>LET'S WATCH MOVIES TOGETHER</h1>
+              <h1>{title}</h1>
               <p>How much does Nextflix cost? Watch Nextflix on your smartphone, tablet, Smart TV, laptop or streaming device, all for one fixed monthly fee.</p>
               <Link href="/movies">
                 <button className={montserrat.className}>Explore Movies</button>
               </Link>
             </div>
             <div className={heroStyles.hero_image}>
-              <Image src="/next.svg" alt="Hero Image" width={500} height={500}/>
+              <Image src={imageUrl} alt="Hero Image" width={500} height={500}/>
             </div>
           </div>
         </div>
