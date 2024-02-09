@@ -1,8 +1,9 @@
 import React from 'react'
+import Herosection from '../components/Herosection'
 
 const page = () => {
   return (
-    <div>About page!</div>
+    <Herosection title={"OUR STORY"} imageUrl={"/vercel.svg"}/>
   )
 }
 
