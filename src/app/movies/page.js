@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import MovieCard from '../components/MovieCard';
+import styles from '@/app/styles/common.module.css';
 
 const page = async () => {
 
@@ -13,16 +15,23 @@ const page = async () => {
   };
   const res = await fetch(url, options);
   const data = await res.json();
-  const main_data = data.titles;
+  const main_data = await data.titles;
 
   console.log(main_data);
 
   return (
     <>
-    <h2>Movies Page</h2>
-    <Link href={'/movies/asdasd'}>
-      go to
-    </Link>
+    <section className={styles.MovieSection}>
+      <div className={styles.container}>
+        <h2>Series and Movies</h2>
+        <MovieCard/>
+        {
+          main_data.map((curElem) => {
+            return <MovieCard key={curElem.id} {...curElem}/>
+          })
+        }
+      </div>
+    </section>
     </>
   )
 }
