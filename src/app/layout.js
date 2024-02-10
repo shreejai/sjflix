@@ -1,10 +1,16 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/app/components/Header";
-import { Montserrat } from 'next/font/google'
+import { Montserrat } from "next/font/google";
  
 // If loading a variable font, you don't need to specify the font weight
 const montserrat = Montserrat({
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+const inter = Inter({
   weight: ['300', '400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
   display: 'swap',
@@ -17,9 +23,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={montserrat.className}>
+    <html lang="en" className={inter.className}>
       <body>
-      <Header />
+      <Header/>
       {children}
       </body>
     </html>
