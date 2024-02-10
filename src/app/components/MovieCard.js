@@ -1,9 +1,8 @@
 'use client'
 
-import styles from '@/app/styles/common.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import styles from '@/app/styles/common.module.css';
 
 const MovieCard = (curElem) => {
   // const {id, type, title, synopsis} = curElem.jawSummary;
@@ -18,7 +17,7 @@ const MovieCard = (curElem) => {
     <>
       <div className={styles.card}>
         <div className={styles.card_image}>
-          <Image src={BgImg} width={250} height={200}/>
+          <Image alt='' src={BgImg} width={250} height={200}/>
         </div>
         <div className={styles.card_data}>
           <h3>Title: {title}</h3>
