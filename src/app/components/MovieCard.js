@@ -2,6 +2,7 @@
 
 import styles from '@/app/styles/common.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 const MovieCard = (curElem) => {
@@ -22,7 +23,9 @@ const MovieCard = (curElem) => {
         <div className={styles.card_data}>
           <h3>Title: {title}</h3>
           <p>{synopsis}</p>
-          <p>Id:{id}</p>
+          <Link href={`/movies/${id}`}>
+            <button>Read more</button>
+          </Link>
         </div>    
       </div>
     </>
