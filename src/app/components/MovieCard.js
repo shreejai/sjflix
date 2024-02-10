@@ -10,17 +10,20 @@ const MovieCard = (curElem) => {
   var title = jawSummary?.title ? jawSummary.title : "Not Available";
   var id = jawSummary?.id ? jawSummary.id : "No Id";
   var BgImg = jawSummary?.backgroundImage?.url;
-  console.log(jawSummary);
+  var synopsis = jawSummary?.synopsis;
+  // console.log(jawSummary);
+
   return (
     <>
       <div className={styles.card}>
         <div className={styles.card_image}>
-          {/* <Image src={curElem.jawSummary?.backgroundImage?.url } width={150} height={100}/> */}
+          <Image src={BgImg} width={250} height={200}/>
         </div>
-        <h5>Movie Card</h5>
-        <p>{BgImg}</p>
-        <p>Title:{title}</p>
-        <p>Id:{id}</p>
+        <div className={styles.card_data}>
+          <h3>Title: {title}</h3>
+          <p>{synopsis}</p>
+          <p>Id:{id}</p>
+        </div>    
       </div>
     </>
   )
