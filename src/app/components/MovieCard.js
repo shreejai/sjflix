@@ -11,16 +11,18 @@ const MovieCard = (curElem) => {
   var id = jawSummary?.id ? jawSummary.id : "No Id";
   var BgImg = jawSummary?.backgroundImage?.url;
   var synopsis = jawSummary?.synopsis;
+  synopsis.length > 66 ?  synopsis=synopsis.slice(0,63)+" ..." : synopsis;
+  title.length > 20 ?  title = title.slice(0,18) + " ..." : title ;
   // console.log(jawSummary);
 
   return (
     <>
       <div className={styles.card}>
         <div className={styles.card_image}>
-          <Image alt='' src={BgImg} width={250} height={200}/>
+          <Image alt='' src={BgImg} width={260} height={200}/>
         </div>
         <div className={styles.card_data}>
-          <h3>Title: {title}</h3>
+          <h3>{title}</h3>
           <p>{synopsis}</p>
           <Link href={`/movies/${id}`}>
             <button>Read more</button>
