@@ -1,8 +1,14 @@
-import React from 'react'
+import ContactCard from "../components/ContactCard";
+import styles from '@/app/contact/contact.module.css';
 
 const page = () => {
   return (
-    <div>Contact Us</div>
+    <>
+      <div className={styles.container}>
+        <h1>Contact Us</h1>
+        <ContactCard/>
+      </div>
+    </>
   )
 }
 
