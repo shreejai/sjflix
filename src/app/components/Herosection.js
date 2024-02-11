@@ -26,7 +26,7 @@ const Herosection = ({title, imageUrl}) => {
           <div className={styles.grid_two_section}>
             <div className={heroStyles.hero_content} style={{color: '#fff'}}>
               <h1 style={{color: '#fff'}}>{title}</h1>
-              <p>How much does Nextflix cost? Watch Nextflix on your smartphone, tablet, Smart TV, laptop or streaming device, all for one fixed monthly fee.</p>
+              <p>NextFlix is built using Next.js and Netflix RapidAPI that provides details, stats and information of TV shows, movies, series, documentaries and more.</p>
               <Link href="/movies">
                 <button className={montserrat.className} style={{background: "#e50815"}}>Explore Movies</button>
               </Link>

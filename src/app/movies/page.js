@@ -5,10 +5,12 @@ const page = async () => {
 
   return (
     <>
-    <section className={styles.MovieSection}>
+    <section className={styles.movieSection}>
       <div className={styles.container}>
         <h2>Series and Movies</h2>
-        <MovieData/>
+        <div className={styles.card_section}>
+          <MovieData/>
+        </div>
       </div>
     </section>
     </>
