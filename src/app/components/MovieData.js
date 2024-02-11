@@ -3,6 +3,9 @@ import styles from '@/app/styles/common.module.css';
 
 const MovieData = async () => {
 
+  // Testing loader
+  // await new Promise(resolve=>setTimeout(resolve, 2000));
+
   const url = process.env.RAPID_API_URL;
 
   const options = {
