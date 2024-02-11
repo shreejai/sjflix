@@ -13,18 +13,26 @@ const montserrat = Montserrat({
 
 const Herosection = ({title, imageUrl}) => {
   return (
-      <main className={heroStyles.main_section}>
+      <main className={heroStyles.main_section} 
+      style={{ 
+        backgroundImage: 'linear-gradient(44deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/nextflix-bg-big.jpeg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        width: '100%',
+        height: '100%' // Adjust height as per your requirement
+      }}>
         <div className={styles.container}>
           <div className={styles.grid_two_section}>
-            <div className={heroStyles.hero_content}>
-              <h1>{title}</h1>
+            <div className={heroStyles.hero_content} style={{color: '#fff'}}>
+              <h1 style={{color: '#fff'}}>{title}</h1>
               <p>How much does Nextflix cost? Watch Nextflix on your smartphone, tablet, Smart TV, laptop or streaming device, all for one fixed monthly fee.</p>
               <Link href="/movies">
-                <button className={montserrat.className}>Explore Movies</button>
+                <button className={montserrat.className} style={{background: "#e50815"}}>Explore Movies</button>
               </Link>
             </div>
             <div className={heroStyles.hero_image}>
-              <Image src={imageUrl} alt="Hero Image" width={500} height={500}/>
+              <Image style={{filter: "invert(1)"}} src={imageUrl} alt="Hero Image" width={500} height={500}/>
             </div>
           </div>
         </div>
