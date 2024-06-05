@@ -20,7 +20,7 @@ const MovieCard = (curElem) => {
     <>
       <div className={styles.card}>
         <div className={styles.card_image}>
-          <Image alt={fullTitle} src={BgImg ? BgImg: '/nextflix-bg-big.jpeg'} width={260} height={200}/>
+          <Image alt={fullTitle} src={BgImg ? BgImg: '/Netflix_Symbol_RGB.png'} width={260} height={200} style={{background:'#000', objectFit:'contain', height:'145px'}}/>
         </div>
         <div className={styles.card_data}>
           <h3>{title}</h3>
