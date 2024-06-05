@@ -24,13 +24,15 @@ const page = async ({params}) => {
   const data = await res.json();
   //console.log(data);
 
+  const bgImg = data[0]?.details?.backgroundImage?.url? data[0]?.details?.backgroundImage?.url: '/nextflix-bg-big.jpeg';
+
   return (
     <>
       <div className={styles.container}>
         <h2 className={styles.movie_title}> NextFlix / <span> {data[0]?.details?.type} </span> </h2>
         <div className={styles.card_section}>
           <div>
-            <Image alt="Movie image" width={600} height={300} src={data[0]?.details?.backgroundImage?.url}/>
+            <Image alt="Movie image" width={600} height={300} src={bgImg} style={{background:'#000', objectFit:'contain'}}/>
           </div>
           <div>
             <h1>{data[0]?.details?.title}</h1>

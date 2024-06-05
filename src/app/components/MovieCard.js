@@ -8,6 +8,7 @@ const MovieCard = (curElem) => {
   // const {id, type, title, synopsis} = curElem.jawSummary;
   var jawSummary = curElem.jawSummary;
   var title = jawSummary?.title ? jawSummary.title : "Not Available";
+  var fullTitle = title;
   var id = jawSummary?.id ? jawSummary.id : "No Id";
   var BgImg = jawSummary?.backgroundImage?.url;
   var synopsis = jawSummary?.synopsis;
@@ -19,7 +20,7 @@ const MovieCard = (curElem) => {
     <>
       <div className={styles.card}>
         <div className={styles.card_image}>
-          <Image alt='' src={BgImg} width={260} height={200}/>
+          <Image alt={fullTitle} src={BgImg ? BgImg: '/nextflix-bg-big.jpeg'} width={260} height={200}/>
         </div>
         <div className={styles.card_data}>
           <h3>{title}</h3>
