@@ -24,7 +24,7 @@ const page = async ({params}) => {
   const data = await res.json();
   //console.log(data);
 
-  const bgImg = data[0]?.details?.backgroundImage?.url? data[0]?.details?.backgroundImage?.url: '/nextflix-bg-big.jpeg';
+  const bgImg = data[0]?.details?.backgroundImage?.url? data[0]?.details?.backgroundImage?.url: '/Netflix_Symbol_RGB.png';
 
   return (
     <>
